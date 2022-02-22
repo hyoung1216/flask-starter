@@ -29,7 +29,7 @@ class ContactUs(db.Model):
 # Customized ContactUs model admin
 class ContactUsAdmin(sqla.ModelView):
     column_sortable_list = ('id', 'name', 'email', 'received_time')
-    column_filters = ('id', 'name', 'email', 'received_time')
+    column_filters = ('id', 'name', 'email', 'subject', 'received_time')
 
     def __init__(self, session):
         super(ContactUsAdmin, self).__init__(ContactUs, session)
